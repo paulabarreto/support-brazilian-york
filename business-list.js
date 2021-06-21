@@ -18,7 +18,7 @@ var LikeButton = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
 
-    _this.state = [{ image: "docs/sb.png", title: "Spice and Bites", text: "Party and finger foods.", website: "https://www.spiceandbites.ca/" }, { image: "docs/atlantico.png", title: "Atlantico Sushi", text: "Sushi and Brazilian food.", website: "https://www.atlanticosushi.com/" }, { image: "docs/brazilian_market.png", title: "Brazilian Market", text: "Brazilian Groceries Delivery", website: "https://brazilianmarket.ca/" }];
+    _this.state = [{ image: "docs/sb.png", title: "Spice and Bites", text: "Party and finger foods.", website: "https://www.spiceandbites.ca/" }, { image: "docs/atlantico.png", title: "Atlantico Sushi", text: "Sushi and Brazilian food.", website: "https://www.atlanticosushi.com/" }, { image: "docs/brazilian_market.png", title: "Brazilian Market", text: "Brazilian Groceries Delivery", website: "https://brazilianmarket.ca/" }, { image: "docs/delicake.png", title: "Delicake", text: "Cakes and sweets", website: "https://delicake.ca/" }];
     return _this;
   }
 
@@ -28,46 +28,42 @@ var LikeButton = function (_React$Component) {
 
       return React.createElement(
         "div",
-        null,
+        { className: "row" },
         this.state.map(function (business, index) {
           return React.createElement(
             "div",
-            { key: index },
+            { key: index, className: "col-sm mb-3 d-flex justify-content-center" },
             React.createElement(
               "div",
-              { className: "col-sm mb-3 d-flex justify-content-center" },
+              { className: "card", style: { width: 18 + 'rem' } },
+              React.createElement("img", { src: business.image, className: "card-img-top card-img-height", alt: "..." }),
               React.createElement(
                 "div",
-                { className: "card", style: { width: 18 + 'rem' } },
-                React.createElement("img", { src: business.image, className: "card-img-top card-img-height", alt: "..." }),
+                { className: "card-body" },
                 React.createElement(
-                  "div",
-                  { className: "card-body" },
-                  React.createElement(
-                    "h5",
-                    { className: "card-title" },
-                    business.title
-                  ),
-                  React.createElement(
-                    "p",
-                    { className: "card-text" },
-                    business.text
-                  ),
-                  React.createElement(
-                    "a",
-                    { target: "_blank", href: business.website },
-                    React.createElement("i", { className: "fas fa-globe" })
-                  ),
-                  React.createElement(
-                    "a",
-                    { href: "#" },
-                    React.createElement("i", { className: "fab fa-facebook" })
-                  ),
-                  React.createElement(
-                    "a",
-                    { href: "#" },
-                    React.createElement("i", { className: "fab fa-instagram" })
-                  )
+                  "h5",
+                  { className: "card-title" },
+                  business.title
+                ),
+                React.createElement(
+                  "p",
+                  { className: "card-text" },
+                  business.text
+                ),
+                React.createElement(
+                  "a",
+                  { target: "_blank", href: business.website },
+                  React.createElement("i", { className: "fas fa-globe" })
+                ),
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("i", { className: "p-2 fab fa-facebook" })
+                ),
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("i", { className: "fab fa-instagram" })
                 )
               )
             )
